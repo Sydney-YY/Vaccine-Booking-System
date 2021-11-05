@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register now</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" th:src="@{/js/auto-complete.js}"></script>
+    <script type="text/javascript" th:src="@{/js/userRegister.js}"></script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+
+</head>
+
+<body>
+<div class="wrapper-register">
+    <div class="logo">
+        <a href="log-in.html"><img id="logo-register" th:src="@{/img/logo.png}"></a>
+    </div>
+</div>
+<!--Form starts here-->
+<div class="container" style="padding-top: 30px;">
+    <!--    <form class="form-register ">-->
+    <!--row 1-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>First name:</label>
+            <input id="firstname" type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Age:</label>
+            <input id="age" type="number" class="form-control" placeholder="Age">
+        </div>
+    </div>
+    <!--row 2-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Last name:</label>
+            <input id="lastname" type="text" class="form-control" placeholder="Last name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Password:</label>
+            <input id="password" type="password" class="form-control" placeholder="Create your password" required>
+        </div>
+    </div>
+
+    <!--row 3-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Account:</label>
+            <input id="account" type="text" class="form-control" placeholder="Account" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Confirm your password:</label>
+            <input id="passwordSecond" type="password" class="form-control" placeholder="Confirm your password"
+                   required>
+        </div>
+    </div>
+
+    <!--row 4-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Email address:</label>
+            <input id="email" type="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Please set your security question:</label>
+            <input id="question" type="text" class="form-control" placeholder="Please enter your question"
+                   required>
+        </div>
+    </div>
+
+    <!--row 5-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Address:</label>
+            <input id="autocomplete" placeholder="Enter your address"  type="text"
+                   class="form-control">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Please set your security question answer:</label>
+            <input id="questionAnswer" type="text" class="form-control" placeholder="Please enter your answer"
+                   required>
+        </div>
+
+    </div>
+
+    <!--row 6-->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Mobile Phone:</label>
+            <input id="phoneNumber" type="number" class="form-control" placeholder="Mobile Phone (Start with 0)"
+                   maxlength=10 required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Gender:</label>
+            <select name="gender" id="gender" style="width: 100%; height: 33px;">
+                <option value="Select">Select your option</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+        </div>
+        <div class="col-md-6 mb-3" style="padding-top: 25px; text-align: right;">
+            <div class="check" style="display: inline; padding-right: 30px;">
+                <a th:href="@{/vacBook/user/checkEligibilityRegister}" class="link-danger">Check eligibility</a>
+            </div>
+            <input href="" type="submit" class="btn btn-success" value="Confirm" onclick="return check()"></input>
+            <a th:href="@{/vacBook/user/index}" type="submit" class="btn btn-danger">Back</a>
+        </div>
+    </div>
+    <!--    </form>-->
+</div>
+
+
+</div>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvL0oAUZCGxOvATeo595zapc1fyEVhoC0&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change password</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/style.css}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+</head>
+
+<body>
+
+<div class="container pswEdit" style="align-items: center;width: 500px;">
+
+
+    <div class="change-psw-table" style="align-items: center; padding-top: 250px;width: 500px;">
+        <div class="row username" style="width:500px; ">
+            <div class="col">
+                <!--Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters-->
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control"
+                       id="password" placeholder="New Password" required>
+
+
+            </div>
+        </div>
+        <br>
+        <div class="row" style="width:500px;">
+            <div class="col">
+                <input type="password" class="form-control" id="confirm_password"
+                       placeholder="Confirm your password" required>
+            </div>
+        </div>
+        <div class="" style="padding-top: 25px; text-align: right;">
+            <button type="submit" class="btn btn-success" onclick="changePassword()">Save</button>
+        </div>
+    </div>
+</div>
+<script>
+    function changePassword() {
+        var password = document.getElementById("password").value,
+            confirm_password = document.getElementById("confirm_password").value;
+        <!--Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters-->
+        let reg= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        let checkPwd = reg.test(password);
+
+        if(checkPwd == false){
+            layer.msg("The password is invalid! The password MUST contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
+            return false;
+        }
+        if (password !== confirm_password) {
+            layer.msg("Passwords Don't Match");
+            return false;
+        }
+        console.log(password)
+        console.log(confirm_password)
+        var user_id = sessionStorage.getItem("user_id")
+        var data = {user_id: user_id, changePassword: confirm_password}
+        $.ajax({
+            url:"http://localhost:8080/vacBook/user/changePassword",
+            data: data,
+            type: "POST",
+            dataType: "text",
+            success: function () {
+                console.log(data);
+                sessionStorage.clear()
+                layer.msg("change successfully!")
+                setTimeout(function () {//两秒后跳转
+                    location.href = "http://localhost:8080/vacBook/user/index"
+                }, 2000);
+            },
+            error: function () {
+                location.href = "login";
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

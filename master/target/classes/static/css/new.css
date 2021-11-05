@@ -1,0 +1,88 @@
+body{
+    background-color:#FFF9F9 !important;
+}
+
+/*-- log-in or log-in 2 page --*/
+.wrapper {
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 588px;
+    height: auto;
+}
+
+.wrapper form {
+    padding: 80px 0;
+    /* position: relative; */
+    z-index: 2;
+    max-width: 350px;
+}
+
+.wrapper input {
+    display: block;
+    /* appearance: none; */
+    outline: 0;
+    border: 1px solid fade(white, 40%);
+    background-color: fade(white, 20%);
+    width: 350px;
+
+    /* border-radius: 3px; */
+    padding: 10px 15px;
+    margin: 0 auto 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+
+    color: black;
+
+    transition-duration: 0.25s;
+    font-weight: 300;
+
+}
+
+.wrapper button {
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+
+    border-radius: 3px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    width: 350px;
+}
+
+/* -- register-page -- */
+#logo-register{
+    max-width: 100%;
+    width: 250px;
+}
+.wrapper-register{
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.form-register{
+    max-width: 600px;
+
+    margin: 20px auto;
+}
+.form-rounded{
+    border-radius: 1rem;
+}
+#gender{
+    background-color:white;
+    border-color:rgb(204,204,204);
+    border-radius: 0.4rem;
+}
+.form-control{
+    -webkit-appearance: none;
+}
+
