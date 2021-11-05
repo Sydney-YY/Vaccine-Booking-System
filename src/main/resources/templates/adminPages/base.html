@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VacBook</title>
+  <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap"
+          rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+  </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/adminBookingModel.js}"></script>
+</head>
+<body class="bg">
+<div id="fh5co-page" style="background-color: transparent; display: flex; flex-direction: row; width: 100vw; height: 100vh">
+
+  <aside id="fh5co-aside" role="complementary" class="border js-fullheight" style="width: 21vw; height: 100vh">
+          <div class="logo">
+            <a><img id="logo-register" th:src ="@{/img/logo-admin.png}"></a>
+          </div>
+
+          <nav style="background-color: #e6b8b8; height: 100vh" id="fh5co-main-menu" >
+                <ul>
+                  <li><a th:href="@{/vacbook/admin/dashboard}"><span>DASHBOARD</span></a></li>
+                  <li><a th:href="@{/vacbook/admin/bookings}"><span>BOOKINGS</span></a></li>
+                  <li><a th:href="@{/vacbook/admin/vaccines}"><span>VACCINES</span></a></li>
+                  <li><a th:href="@{/vacbook/admin/setting}"><span>SETTING</span> </a></li>
+                </ul>
+            <div class ="logout">
+              <a  th:href="@{/vacbook/admin/logout}"><span>Log out</span></a>
+            </div>
+          </nav>
+
+  </aside>
+  <div style="width: 79vw; height: 100vh">
+    <div style="background-color: #e6b8b8; height: 90.31px">
+<!--      <div>-->
+<!--        <input class="btn btn-default" type="text" value="Welcome Admin: " />-->
+<!--        <span th:text="${result.name}"></span>-->
+<!--      </div>-->
+
+    </div>
+    <div layout:fragment = "content">
+        <div class="overview-text" style="padding-top: 50px">
+            <h2 style=" font-family: 'ABeeZee', sans-serif; color: #FA5652;text-align: center">Covid-19 Alert</h2>
+            <h3 style=" font-family: 'ABeeZee', sans-serif;color: #035755;font-size: 40px;text-align: center">Symptomps</h3>
+            <p style="padding-top: 20px;font-family: 'ABeeZee', sans-serif;color: #035755;font-size: 24px;text-align: center">Corona viruses are a type of virus. <br>There are many different kinds, and some cause disease. <br> A newly identified type has caused a recent outbreak of respiratory </p>
+        </div>
+        <div class="overview-img" style="text-align: center;padding-top: 20px">
+            <img class="img-fluid" alt="Responsive image" th:src="@{/img/admin-homepage.svg}" style="width: 50%;">
+        </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,120 @@
+body {
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+nav ul li {
+    font-size: 40px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #FFF9F9;
+    border: 0.5px solid #e3e3e3;
+    letter-spacing: 0.1em;
+    /*width: 20vw;*/
+    height: 1.5em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li span {
+    text-align: center;
+    position: center;
+    color: white;
+    mix-blend-mode: difference;
+    padding: 10px 15px;
+    margin: 0 auto 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav ul li::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: inherit;
+    background-color: #eaecf7;
+    border-radius: 50%;
+    top: 0;
+    left: -0.75em;
+    transition: 0.5s ease-out;
+}
+
+nav ul li:hover::before {
+    transform: scale(7);
+}
+.logo{
+    background-color: #FFF9F9;
+    /*height: 70px;*/
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.logo img {
+    max-width: 85%;
+
+}
+.logout a{
+    text-decoration: none;
+    text-align: center;
+}
+.logout {
+    font-size: 40px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #FFF9F9;
+    border: 0.5px solid #e3e3e3;
+    letter-spacing: 0.1em;
+    /*width: 20vw;*/
+    height: 1.5em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 200px;
+}
+
+
+
+
+.logout span{
+    text-align: center;
+    position: center;
+    color: white;
+    mix-blend-mode: difference;
+    padding: 10px 15px;
+    margin: 0 auto 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+.logout:hover::before {
+    transform: scale(7);
+}
+
+.logout::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: inherit;
+    background-color: #eaecf7;
+    border-radius: 50%;
+    top: 0;
+    left: -0.75em;
+    transition: 0.5s ease-out;
+}
+
+

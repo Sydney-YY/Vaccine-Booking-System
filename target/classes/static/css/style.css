@@ -1,0 +1,561 @@
+body {
+    background-color: #FFF9F9 !important;
+}
+
+p {
+    font-family: 'ABeeZee', sans-serif;
+}
+
+/*-- Index home page --*/
+.homepage-logo {
+    width: 150px;
+}
+
+.homepage-logo img {
+    width: 150px;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFF9F9;
+    overflow: auto;
+    height: auto;
+}
+
+
+
+.left-links {
+    flex: 0.7;
+}
+
+.right-links {
+    padding-top: 10px;
+    font-family: 'ABeeZee', sans-serif;
+
+}
+
+.links {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.links:hover {
+    color: #FB4C47;
+}
+
+
+
+
+
+/*-- log-in or log-in 2 page --*/
+.wrapper {
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 588px;
+    height: auto;
+}
+
+.wrapper form {
+    padding: 80px 0;
+    /* position: relative; */
+    z-index: 2;
+    max-width: 350px;
+}
+
+.wrapper input {
+    display: block;
+    /* appearance: none; */
+    outline: 0;
+    border: 1px solid fade(white, 40%);
+    background-color: fade(white, 20%);
+    width: 350px;
+
+    /* border-radius: 3px; */
+    padding: 10px 15px;
+    margin: 0 auto 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+
+    color: black;
+
+    transition-duration: 0.25s;
+    font-weight: 300;
+
+}
+
+.wrapper button {
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+
+    border-radius: 3px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    width: 350px;
+}
+
+/* -- register-page -- */
+#logo-register {
+    max-width: 100%;
+    width: 250px;
+}
+
+.wrapper-register {
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.form-register {
+    max-width: 600px;
+
+    margin: 20px auto;
+}
+
+.form-rounded {
+    border-radius: 1rem;
+}
+
+#gender {
+    background-color: white;
+    border-color: rgb(204, 204, 204);
+    border-radius: 0.4rem;
+}
+
+/*-- HomePage index.html--*/
+.nav-item a{
+    position: relative;
+    display: inline-block;
+    color: black;
+    overflow: hidden;
+    background: linear-gradient(to right, #FB4C47, #FB4C47 50%, black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.nav-item a:hover{
+    background-position: 0 100%;
+
+}
+.overview-section {
+    display: flex;
+    padding-top: 100px;
+}
+
+
+.overview-text {
+    align-items: center;
+    padding-top: 50px;
+}
+
+.overview-text h2 {
+    font-family: 'ABeeZee', sans-serif;
+    color: #FA5652;
+}
+
+.overview-text h3 {
+    font-family: 'ABeeZee', sans-serif;
+    color: #035755;
+    font-size: 40px;
+}
+
+.overview-text p {
+    padding-top: 20px;
+    font-family: 'ABeeZee', sans-serif;
+    color: #035755;
+    font-size: 24px;
+}
+
+.check-eligibility-btn {
+    padding-top: 20px;
+}
+
+.check-eligibility-btn a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: #FB4C47;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    /* border-radius: 30px; */
+    /* border: 1px solid #000000; */
+    -moz-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.overview-img img {
+    max-width: 100%;
+}
+
+/*--Book section --*/
+.heading {
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.heading h6 {
+    color: #FA5652;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.heading h3 {
+    color: #035755;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.search-container {
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+input#search-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #d0cfce;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    outline: none;
+}
+
+.search-bar {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.search-clinic {
+    position: relative;
+    float: right;
+    width: 120px;
+    height: 30px;
+    top: -30px;
+    right: -50px;
+    text-decoration: none;
+    color: #4A514B;
+    font-size: 12px;
+}
+
+.search-location {
+    position: relative;
+    float: right;
+    width: 140px;
+    height: 30px;
+    top: -30px;
+    right: -70px;
+    text-decoration: none;
+    color: #4A514B;
+    font-size: 12px;
+}
+
+.search-icon {
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table tr {
+    background-color: #FFF9F9;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+    font-family: 'ABeeZee', sans-serif;
+
+}
+
+table th {
+    font-size: 20px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #13625F;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+.book-btn a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FB4C47;
+    padding: 10px 20px;
+    background: #fff;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #FB4C47;
+    -moz-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/*--Subscribe form--*/
+.subscribe-form {
+    align-items: center;
+    text-align: center;
+    padding-top: 200px;
+}
+.subscribe-form h3{
+    color: #0C6C44;
+    font-family: 'ABeeZee', sans-serif;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.subscribe-container {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+input#subscribe-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #d0cfce;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    outline: none;
+}
+
+.subscribe-bar {
+    padding-top: 20px;
+}
+
+.submit-btn {
+    position: relative;
+    float: right;
+    width: 105px;
+    height: 75px;
+    top: -45px;
+    right: 0px;
+}
+
+.subscribe-container button {
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color: #FA5652;
+    height: 45px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+}
+
+.btn-back a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FB4C47;
+    padding: 10px 20px;
+    background: #fff;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 1px solid #FB4C47;
+    -moz-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0px 1px 3px rgba(115, 110, 115, 0.5),
+        inset 0px 0px 1px rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+
+}
+
+/*--footer--*/
+.site-footer {
+    background-color: #FFF9F9;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    padding-top: 150px;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+}
+
+.site-footer hr.small {
+    margin: 20px 0
+}
+
+.site-footer h6 {
+    color: #00402E;
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    font-family: 'ABeeZee', sans-serif;
+
+
+}
+
+.site-footer a {
+    color: #737373;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none
+}
+
+.footer-links a {
+    color: #737373
+}
+
+
+.site-footer .social-icons {
+    text-align: right
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d
+}
+
+#loadMore a {
+    float: right;
+    text-decoration: none;
+    color: #B3AEAE;
+    padding-top: 15px;
+}
+
+/* --Booking edit-- */
+.bookEdit {
+    padding-top: 30px;
+}
+
+.brand span {
+    font-size: 20px;
+}
+
+.brand label {
+    font-size: 20px;
+}
+
+.note {
+    display: inline-block;
+    font-size: 15px;
+    font-style: italic;
+    color: #565454;
+}
+
+.cancel-booking {
+    display: inline;
+    float: right;
+}
+
+.cancel-booking a {
+    color: #F00000;
+    font-size: 18px;
+}
+
+.book-edit-table {
+    padding-top: 50px;
+    font-size: 20px;
+    line-height: 3em;
+}
+
+.edit {
+    display: inline; 
+    padding-right: 20px;
+    vertical-align: center;
+}
+.edit a{
+    font-size: 18px;
+}
+
+/*--confirm booking--*/
+.confirm-booking{
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+.confirm-booking-logo img{
+    width: 20%;
+}
+.confirm-booking h6{
+    padding-top: 40px;
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+.book-confirm-table{
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 3em;
+}
+.book-confirm-table h4{
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+
+}

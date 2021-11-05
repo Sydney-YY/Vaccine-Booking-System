@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="adminPages/base.html">
+<div layout:fragment="content" class="container" style="max-width: 700px; padding-top: 50px; padding-bottom: 50px; line-height:30px;">
+  <h1 align="center">User Profile</h1>
+  <form>
+    <table class="table table-striped" style="border: 1px solid black;">
+
+      <tbody style="text-align:center">
+      <tr>
+        <th>User account: </th>
+        <td><span th:text="${result.userAccount}"></span></td>
+      </tr>
+      <tr>
+        <th>User Last name: </th>
+        <td><span th:text="${result.userLastname}"></span></td>
+      </tr>
+      <tr>
+        <th>User First name: </th>
+        <td><span th:text="${result.userFirstname}"></span></td>
+      </tr>
+      <tr>
+        <th>Phone number: </th>
+        <td><span th:text="${result.phoneNumber}"></span></td>
+      </tr>
+      <tr>
+        <th>Email: </th>
+        <td><span th:text="${result.email}"></span></td>
+      </tr>
+      <tr>
+        <th>Gender: </th>
+        <td><span th:text="${result.gender}"></span></td>
+      </tr>
+      <tr>
+        <th>Age: </th>
+        <td><span th:text="${result.age}"></span></td>
+      </tr>
+      <tr>
+        <th>Address: </th>
+        <td><span th:text="${result.address}"></span></td>
+      </tr>
+      <tr>
+        <th>Security question: </th>
+        <td><span th:text="${result.userQuestion}"></span></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </form>
+</div>
+
+</body>
+</html>

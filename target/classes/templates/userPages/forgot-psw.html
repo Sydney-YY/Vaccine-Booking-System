@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot password</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/style.css}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <script type="text/javascript" th:src="@{/js/forgetPassword.js}"></script>
+</head>
+
+<body>
+
+<div class="container pswEdit" style="align-items: center;width: 500px;">
+    <div class="change-psw-table" style="align-items: center; padding-top: 250px;width: 500px;">
+        <div class="row username" style="width:500px; ">
+            <div class="col">
+                <label>Account: </label>
+                <input id="account" type="text" class="form-control" placeholder="Please enter your account" required
+                       onblur="findSafeQuestion()">
+            </div>
+        </div>
+        <br>
+        <div class="row" style="width:500px; ">
+            <div class="col">
+                <label>Safe question</label>
+                <input id="question" readonly="readonly" type="text" class="form-control" placeholder="Safe Question" required>
+            </div>
+        </div>
+        <br/>
+        <div class="row" style="width:500px; ">
+            <div class="col">
+                <label>Please answer your question</label>
+                <input id= "answer" type="text" class="form-control" placeholder="Safe Answer" required>
+            </div>
+        </div>
+    </div>
+    <div class="" style="padding-top: 25px; text-align: right;">
+        <button type="submit" class="btn btn-success" onclick="check()">Next</button>
+    </div>
+</div>
+</body>
+
+</html>

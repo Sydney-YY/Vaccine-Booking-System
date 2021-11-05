@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container confirm-booking">
+        <div class="confirm-booking-logo">
+            <a href="index.html"><img th:src="@{/img/logo.png}"></a>
+        </div>
+        <h6>Thanks for your booking, your booking is now confirmed. You will receive a confirmation email soon. </h6>
+    </div>
+    <div class="container bookEdit">
+        <div class="container book-confirm-table">
+            <div class="row">
+                <div class="col">
+                    <h4>Your booking information is: </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label style="font-weight: 700;">Vaccine:</label>
+                    <div class="col-auto">
+                        <span>{vaccine-brand}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label style="font-weight: 700;">Name:</label>
+                    <div class="col-auto">
+                        <span>{firstName}</span>+<span>{lastName}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label style="font-weight: 700;">Date & Time:</label>
+                    <div class="col-auto">
+                        <span>{date}</span>+<span>{time}</span>
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label style="font-weight: 700;">Location:</label>
+                    <div class="col-auto">
+                        <span>{location}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-back" style="padding-top: 25px; text-align: right;">
+            <div class="edit">
+                <a href="index.html" class="link-danger">Back to the Home Page</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

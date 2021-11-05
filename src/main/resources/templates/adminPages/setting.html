@@ -1,0 +1,58 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="adminPages/base.html">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <script type="text/javascript" th:src="@{/js/settingAlter.js}"></script>
+</head>>
+
+<div layout:fragment="content" class="container"
+     style="max-width: 700px; margin-top: 50px; padding-top: 30px;  padding-bottom: 30px; line-height:30px; border: 1px solid #e3e3e3;background-color: #FFF9F9">
+    <h1 align="center"style="font-family:'ABeeZee', sans-serif">Setting</h1>
+
+
+        <table class="table table-striped" style="border: 1px solid #e3e3e3;">
+
+            <tbody style="text-align: center;font-family:'ABeeZee', sans-serif">
+            <tr>
+                <th>Admin account: </th>
+                <td><span th:text="${result.account}"></span></td>
+            </tr>
+            <tr>
+                <th>Admin name: </th>
+                <td><input th:value="${result.name}" id="name" name="name"style="width: 330px"/></td>
+            </tr>
+            <tr>
+                <th>Admin location: </th>
+                <td>
+                    <select  id="selectList" onchange="obtain()">
+                        <option th:text="${result.location_name}" th:id = "${result.location_id}"></option>
+                        <option th:each="l:${result.location_options}"
+                                th:if="${l.location != result.location_name}"
+                                th:text="${l.location}"
+                                th:id = "${l.getLocationId()}"
+                               >
+                        </option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <th> Change Password: </th>
+                <td><input id="changePassword" type="password"/></td>
+            </tr>
+            <tr>
+                <th> Confirm Password: </th>
+                <td><input id="confirmPassword" type="password" name = "password"/></td>
+            </tr>
+            <td><input id="option" th:value="${result.location_id}" name="location" style="display: none;"/></td>
+            </tbody>
+        </table>
+        <div>
+            <button class="shadow btn btn-success rounded" type="submit" id="login-button"  onclick="return check()">Save</button>
+        </div>
+
+
+
+</div>
+</html>
